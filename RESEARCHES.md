@@ -10,3 +10,8 @@ https://www.mkyong.com/hibernate/how-to-generate-code-with-hibernate-tools/
 
 https://rahulvishwakarma.wordpress.com/2014/07/13/generate-the-jpa-annotated-entities-from-the-database-tables-using-hibernate-tools/
 
+#composite primary keys
+
+https://thoughts-on-java.org/primary-key-mappings-jpa-hibernate/
+
+https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-and-hibernate/
