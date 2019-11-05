@@ -18,4 +18,6 @@ https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-an
 
 # how-to-use-spring-boot-profiles
 
+spring-boot:run -Dspring-boot.run.profiles=prod
+
 https://stackoverflow.com/questions/40060989/how-to-use-spring-boot-profiles
