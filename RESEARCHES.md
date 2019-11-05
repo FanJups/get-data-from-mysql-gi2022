@@ -21,3 +21,7 @@ https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-an
 spring-boot:run -Dspring-boot.run.profiles=prod
 
 https://stackoverflow.com/questions/40060989/how-to-use-spring-boot-profiles
+
+# what-are-the-possible-values-of-the-hibernate-hbm2ddl-auto
+
+https://stackoverflow.com/questions/438146/what-are-the-possible-values-of-the-hibernate-hbm2ddl-auto-configuration-and-wha
