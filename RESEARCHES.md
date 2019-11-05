@@ -15,3 +15,7 @@ https://rahulvishwakarma.wordpress.com/2014/07/13/generate-the-jpa-annotated-ent
 https://thoughts-on-java.org/primary-key-mappings-jpa-hibernate/
 
 https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-and-hibernate/
+
+# how-to-use-spring-boot-profiles
+
+https://stackoverflow.com/questions/40060989/how-to-use-spring-boot-profiles
