@@ -25,3 +25,11 @@ https://stackoverflow.com/questions/40060989/how-to-use-spring-boot-profiles
 # what-are-the-possible-values-of-the-hibernate-hbm2ddl-auto
 
 https://stackoverflow.com/questions/438146/what-are-the-possible-values-of-the-hibernate-hbm2ddl-auto-configuration-and-wha
+
+# There was an unexpected error (type=Internal Server Error, status=500)
+
+https://www.google.com/search?q=There+was+an+unexpected+error+(type%3DInternal+Server+Error%2C+status%3D500).+could+not+deserialize%3B+nested+exception+is+org.hibernate.type.SerializationException%3A+could+not+deserialize&oq=There+was+an+unexpected+error+(type%3DInternal+Server+Error%2C+status%3D500).+could+not+deserialize%3B+nested+exception+is+org.hibernate.type.SerializationException%3A+could+not+deserialize&aqs=chrome..69i57.9104j0j7&sourceid=chrome&ie=UTF-8
+
+https://stackoverflow.com/questions/23049498/hibernate-could-not-deserialize-invalid-stream-header
+
+
