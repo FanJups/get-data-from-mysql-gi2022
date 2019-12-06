@@ -1,49 +1,67 @@
 package com.gi2022.getdatafrommysql.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "GESTIONNAIRE")
+@Table(name = "gestionnaire")
 public class Gestionnaire implements Serializable {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3521543095267351985L;
+
 	@Id
 	@GeneratedValue
-	@Column(columnDefinition = " int(10) unsigned")
-	private Integer idGest;
+	@Column
+	private int idGest;
 	
-	@Column(columnDefinition = "varchar(45) NOT NULL")
+	@Column
 	private String nomGest;
 	
 	
-	@Column(columnDefinition = "tinyint(1) NOT NULL")
-	private Integer typeGest;
+	@Column
+	private int typeGest;
 	
-	@Column(columnDefinition = "varchar(20) NOT NULL",unique=true)
+	@Column(unique=true)
 	private String login;
 	
 	
-	@Column(columnDefinition = "varchar(20) NOT NULL")
+	@Column
 	private String pwd;
 	
-	@Column(columnDefinition = "tinyint(1) NOT NULL DEFAULT 0")
-	private Integer actif;
+	@Column
+	private int actif;
+	
+	@OneToMany(mappedBy = "idGest",fetch = FetchType.LAZY)
+	private List<Facture> factures = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "idGest",fetch = FetchType.LAZY)
+	private List<GestionStock> gestionStocks = new ArrayList<>();
 
 	
+	
+
+
 	public Gestionnaire()
 	{
 		super();
 	}
 
 
-	public Gestionnaire(String nomGest, Integer typeGest, String login, String pwd, Integer actif) {
+	public Gestionnaire(String nomGest, int typeGest, String login, String pwd, int actif) {
 	
 		this.nomGest = nomGest;
 		this.typeGest = typeGest;
@@ -55,12 +73,12 @@ public class Gestionnaire implements Serializable {
 	
 
 
-	public Integer getIdGest() {
+	public int getIdGest() {
 		return idGest;
 	}
 
 
-	public void setIdGest(Integer idGest) {
+	public void setIdGest(int idGest) {
 		this.idGest = idGest;
 	}
 
@@ -75,12 +93,12 @@ public class Gestionnaire implements Serializable {
 	}
 
 
-	public Integer getTypeGest() {
+	public int getTypeGest() {
 		return typeGest;
 	}
 
 
-	public void setTypeGest(Integer typeGest) {
+	public void setTypeGest(int typeGest) {
 		this.typeGest = typeGest;
 	}
 
@@ -105,13 +123,46 @@ public class Gestionnaire implements Serializable {
 	}
 
 
-	public Integer getActif() {
+	public int getActif() {
 		return actif;
 	}
 
 
-	public void setActif(Integer actif) {
+	public void setActif(int actif) {
 		this.actif = actif;
+	}
+	
+	/**
+	 * @return the factures
+	 */
+	public List<Facture> getFactures() {
+		return factures;
+	}
+
+
+	/**
+	 * @param factures the factures to set
+	 */
+	public void setFactures(List<Facture> factures) {
+		this.factures = factures;
+	}
+	
+	
+
+
+	/**
+	 * @return the gestionStocks
+	 */
+	public List<GestionStock> getGestionStocks() {
+		return gestionStocks;
+	}
+
+
+	/**
+	 * @param gestionStocks the gestionStocks to set
+	 */
+	public void setGestionStocks(List<GestionStock> gestionStocks) {
+		this.gestionStocks = gestionStocks;
 	}
 
 

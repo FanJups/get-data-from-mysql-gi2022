@@ -1,36 +1,40 @@
 package com.gi2022.getdatafrommysql.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "LIGNEFACTURE")
+@Table(name = "lignefacture")
 
 public class LigneFacture implements Serializable {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3321968772337491717L;
+
 	@GeneratedValue
-	@Column(columnDefinition = "int(10) unsigned NOT NULL",unique=true)
-	private Integer idLFac;
+	@Column(unique=true)
+	private int idLFac;
 	
 	//COMPOSITE PRIMARY KEYS
 	
 	@EmbeddedId
 	private LigneFactureId ligneFactureId;
 	
-	@Column(columnDefinition = "decimal(10,2) NOT NULL")
+	@Column
 	private double prix;
 	
-	@Column(columnDefinition = "smallint(4) unsigned NOT NULL")
-	private Integer qte;
+	@Column
+	private int qte;
 	
 	public LigneFacture()
 	{
@@ -47,14 +51,14 @@ public class LigneFacture implements Serializable {
 	/**
 	 * @return the idLFac
 	 */
-	public Integer getIdLFac() {
+	public int getIdLFac() {
 		return idLFac;
 	}
 
 	/**
 	 * @param idLFac the idLFac to set
 	 */
-	public void setIdLFac(Integer idLFac) {
+	public void setIdLFac(int idLFac) {
 		this.idLFac = idLFac;
 	}
 
@@ -89,14 +93,14 @@ public class LigneFacture implements Serializable {
 	/**
 	 * @return the qte
 	 */
-	public Integer getQte() {
+	public int getQte() {
 		return qte;
 	}
 
 	/**
 	 * @param qte the qte to set
 	 */
-	public void setQte(Integer qte) {
+	public void setQte(int qte) {
 		this.qte = qte;
 	}
 
@@ -108,8 +112,34 @@ public class LigneFacture implements Serializable {
 		return "LigneFacture [idLFac=" + idLFac + ", ligneFactureId=" + ligneFactureId + ", prix=" + prix + ", qte="
 				+ qte + "]";
 	}
-	
-	
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(idLFac, ligneFactureId, prix, qte);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof LigneFacture)) {
+			return false;
+		}
+		LigneFacture other = (LigneFacture) obj;
+		return Objects.equals(idLFac, other.idLFac) && Objects.equals(ligneFactureId, other.ligneFactureId)
+				&& Double.doubleToLongBits(prix) == Double.doubleToLongBits(other.prix)
+				&& Objects.equals(qte, other.qte);
+	}
 	
 	
 

@@ -1,26 +1,43 @@
 package com.gi2022.getdatafrommysql.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
 @Entity
-@Table(name="CATEGORIE")
+@Table(name="categorie")
 public class Categorie implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7400903157677555605L;
+
+	/**
+	 * 
+	 */
+	
+
 	@Id
 	@GeneratedValue
-	@Column(columnDefinition = " int(10) unsigned NOT NULL AUTO_INCREMENT")
-	private Integer idCat;
+	@Column
+	private int idCat;
 	
-	@Column(nullable=false, length=60)
+	@Column
     private String nomCat;
+	
+	@OneToMany(mappedBy = "idCategorie",fetch = FetchType.LAZY)
+	private List<Produit> produits = new ArrayList<>();
 	
 	public Categorie() {
         super();
@@ -31,11 +48,11 @@ public class Categorie implements Serializable {
         
     }
 
-	public Integer getIdCat() {
+	public int getIdCat() {
 		return idCat;
 	}
 
-	public void setIdCat(Integer idCat) {
+	public void setIdCat(int idCat) {
 		this.idCat = idCat;
 	}
 
@@ -45,6 +62,22 @@ public class Categorie implements Serializable {
 
 	public void setNomCat(String nomCat) {
 		this.nomCat = nomCat;
+	}
+	
+	
+	
+	
+	/**
+	 * @return the produits
+	 */
+	public List<Produit> getProduits() {
+		return produits;
+	}
+	/**
+	 * @param produits the produits to set
+	 */
+	public void setProduits(List<Produit> produits) {
+		this.produits = produits;
 	}
 	@Override
 	public String toString() {

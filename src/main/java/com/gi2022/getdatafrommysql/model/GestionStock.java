@@ -2,9 +2,11 @@ package com.gi2022.getdatafrommysql.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -12,102 +14,173 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "GESTIONSTOCK")
+@Table(name = "gestionstock")
 public class GestionStock implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2722861303868826276L;
+
+
 	@Id
 	@GeneratedValue
-	@Column(columnDefinition = "int(10) unsigned")
-	private Integer idStock;
+	@Column
+	private int idStock;
 	
 	
-	@Column(columnDefinition = "int(10) unsigned NOT NULL")
-	private Integer qte;
+	@Column
+	private int qte;
 	
-	@Column(columnDefinition = "datetime NOT NULL")
+	@Column
 	private Date dateStock;
 	
-	@Column(columnDefinition = "tinyint(1) NOT NULL DEFAULT 0")
-	private Integer operation;
+	@Column
+	private int operation;
 	
-	@ManyToOne
-    @JoinColumn(name = "idGest")
-	private Gestionnaire gestionnaire;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idGest",referencedColumnName="idGest")
+	private Gestionnaire idGest;
 	
-	@ManyToOne
-    @JoinColumn(name = "codePro")
-	private Produit produit;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "codePro",referencedColumnName="codePro")
+	private Produit codePro;
 	
 	public GestionStock()
 	{
 		super();
 	}
 
-	public GestionStock(Integer qte, Date dateStock, Integer operation, Gestionnaire gestionnaire, Produit produit) {
-		
+	public GestionStock(int qte, Date dateStock, int operation, Gestionnaire idGest, Produit codePro) {
 		this.qte = qte;
 		this.dateStock = dateStock;
 		this.operation = operation;
-		this.gestionnaire = gestionnaire;
-		this.produit = produit;
+		this.idGest = idGest;
+		this.codePro = codePro;
 	}
 
-	public Integer getIdStock() {
+	/**
+	 * @return the idStock
+	 */
+	public int getIdStock() {
 		return idStock;
 	}
 
-	public void setIdStock(Integer idStock) {
+	/**
+	 * @param idStock the idStock to set
+	 */
+	public void setIdStock(int idStock) {
 		this.idStock = idStock;
 	}
 
-	public Integer getQte() {
+	/**
+	 * @return the qte
+	 */
+	public int getQte() {
 		return qte;
 	}
 
-	public void setQte(Integer qte) {
+	/**
+	 * @param qte the qte to set
+	 */
+	public void setQte(int qte) {
 		this.qte = qte;
 	}
 
+	/**
+	 * @return the dateStock
+	 */
 	public Date getDateStock() {
 		return dateStock;
 	}
 
+	/**
+	 * @param dateStock the dateStock to set
+	 */
 	public void setDateStock(Date dateStock) {
 		this.dateStock = dateStock;
 	}
 
-	public Integer getOperation() {
+	/**
+	 * @return the operation
+	 */
+	public int getOperation() {
 		return operation;
 	}
 
-	public void setOperation(Integer operation) {
+	/**
+	 * @param operation the operation to set
+	 */
+	public void setOperation(int operation) {
 		this.operation = operation;
 	}
 
-	public Gestionnaire getGestionnaire() {
-		return gestionnaire;
+	/**
+	 * @return the idGest
+	 */
+	public Gestionnaire getIdGest() {
+		return idGest;
 	}
 
-	public void setGestionnaire(Gestionnaire gestionnaire) {
-		this.gestionnaire = gestionnaire;
+	/**
+	 * @param idGest the idGest to set
+	 */
+	public void setIdGest(Gestionnaire idGest) {
+		this.idGest = idGest;
 	}
 
-	public Produit getProduit() {
-		return produit;
+	/**
+	 * @return the codePro
+	 */
+	public Produit getCodePro() {
+		return codePro;
 	}
 
-	public void setProduit(Produit produit) {
-		this.produit = produit;
+	/**
+	 * @param codePro the codePro to set
+	 */
+	public void setCodePro(Produit codePro) {
+		this.codePro = codePro;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "GestionStock [idStock=" + idStock + ", qte=" + qte + ", dateStock=" + dateStock + ", operation="
-				+ operation + ", gestionnaire=" + gestionnaire + ", produit=" + produit + "]";
+				+ operation + ", idGest=" + idGest + ", codePro=" + codePro + "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(codePro, dateStock, idGest, idStock, operation, qte);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof GestionStock)) {
+			return false;
+		}
+		GestionStock other = (GestionStock) obj;
+		return Objects.equals(codePro, other.codePro) && Objects.equals(dateStock, other.dateStock)
+				&& Objects.equals(idGest, other.idGest) && idStock == other.idStock && operation == other.operation
+				&& qte == other.qte;
 	}
 	
 	
-	
-	
 
+	
 }

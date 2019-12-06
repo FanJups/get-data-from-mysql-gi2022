@@ -1,53 +1,63 @@
 package com.gi2022.getdatafrommysql.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "photo")
 
 public class Photo  implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3759672564580789230L;
+
 	@Id
 	@GeneratedValue
-	@Column(columnDefinition = "int(10) unsigned")
-	private Integer idPhoto;
+	@Column
+	private int idPhoto;
 	
-	@Column(columnDefinition = "varchar(150) NOT NULL")
+	@Column
 	private String lienPhoto;
 	
-	@OneToOne
-    @JoinColumn(name = "codePro")
-	private Produit produit;
+	@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "codePro",referencedColumnName="codePro")
+	private Produit codePro;
+	
+	
 	
 	public Photo()
 	{
 		super();
 	}
-	
-	
 
-	public Photo(String lienPhoto, Produit produit) {
+	public Photo(String lienPhoto, Produit codePro) {
 		this.lienPhoto = lienPhoto;
-		this.produit = produit;
+		this.codePro = codePro;
 	}
-
-
 
 	/**
 	 * @return the idPhoto
 	 */
-	public Integer getIdPhoto() {
+	public int getIdPhoto() {
 		return idPhoto;
 	}
 
 	/**
 	 * @param idPhoto the idPhoto to set
 	 */
-	public void setIdPhoto(Integer idPhoto) {
+	public void setIdPhoto(int idPhoto) {
 		this.idPhoto = idPhoto;
 	}
 
@@ -66,28 +76,60 @@ public class Photo  implements Serializable{
 	}
 
 	/**
-	 * @return the produit
+	 * @return the codePro
 	 */
-	public Produit getProduit() {
-		return produit;
+	public Produit getCodePro() {
+		return codePro;
 	}
 
 	/**
-	 * @param produit the produit to set
+	 * @param codePro the codePro to set
 	 */
-	public void setProduit(Produit produit) {
-		this.produit = produit;
+	public void setCodePro(Produit codePro) {
+		this.codePro = codePro;
 	}
-
-
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Photo [idPhoto=" + idPhoto + ", lienPhoto=" + lienPhoto + ", produit=" + produit + "]";
+		return "Photo [idPhoto=" + idPhoto + ", lienPhoto=" + lienPhoto + ", codePro=" + codePro + "]";
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(codePro, idPhoto, lienPhoto);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof Photo)) {
+			return false;
+		}
+		Photo other = (Photo) obj;
+		return Objects.equals(codePro, other.codePro) && idPhoto == other.idPhoto
+				&& Objects.equals(lienPhoto, other.lienPhoto);
+	}
+	
+	
+	
+	
+}
+	
+	
 	
 	
 	
@@ -95,4 +137,4 @@ public class Photo  implements Serializable{
 	
 	
 
-}
+
