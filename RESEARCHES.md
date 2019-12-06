@@ -32,4 +32,14 @@ https://www.google.com/search?q=There+was+an+unexpected+error+(type%3DInternal+S
 
 https://stackoverflow.com/questions/23049498/hibernate-could-not-deserialize-invalid-stream-header
 
+# @manytoone hibernate  example
+
+https://www.google.com/search?sxsrf=ACYBGNQ37PX5fTY8me_se6UVqpP1lC2tkw%3A1575652554015&ei=yozqXfhK06jV8A-11IfYCg&q=%40manytoone+hibernate++example&oq=%40manytoone+hibernate++example&gs_l=psy-ab.3..0i7i30j0i203j0i5i30j0i8i30l6j0i30.20771.24871..25878...0.2..2.2133.8229.5-1j3j1j1j1......0....1..gws-wiz.......0i71j35i39.cLkOQUe6ims&ved=0ahUKEwj415WWw6HmAhVTVBUIHTXqAasQ4dUDCAs&uact=5
+
+https://thoughts-on-java.org/best-practices-many-one-one-many-associations-mappings/
+
+https://www.baeldung.com/hibernate-one-to-many
+
+https://thoughts-on-java.org/wp-content/uploads/member-access/library/cheatSheets/10%20Common%20Hibernate%20Mistakes%20That%20Cripple%20Your%20Performance.pdf
+
 
