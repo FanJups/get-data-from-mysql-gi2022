@@ -42,4 +42,10 @@ https://www.baeldung.com/hibernate-one-to-many
 
 https://thoughts-on-java.org/wp-content/uploads/member-access/library/cheatSheets/10%20Common%20Hibernate%20Mistakes%20That%20Cripple%20Your%20Performance.pdf
 
+# one to one hibernate example
+
+https://www.google.com/search?q=one+to+one+hibernate+example&oq=OneToOne+hibernate+&aqs=chrome.1.69i57j0l7.13303j0j7&sourceid=chrome&ie=UTF-8
+
+https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/
+
 
