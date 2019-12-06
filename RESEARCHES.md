@@ -48,4 +48,10 @@ https://www.google.com/search?q=one+to+one+hibernate+example&oq=OneToOne+hiberna
 
 https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/
 
+# org.hibernate.AnnotationException: Use of @OneToMany or @ManyToMany targeting an unmapped class
+
+https://www.google.com/search?q=org.hibernate.AnnotationException%3A+Use+of+%40OneToMany+or+%40ManyToMany+targeting+an+unmapped+class&oq=org.hibernate.AnnotationException%3A+Use+of+%40OneToMany+or+%40ManyToMany+targeting+an+unmapped+class&aqs=chrome..69i57.1409j0j7&sourceid=chrome&ie=UTF-8
+
+https://discourse.hibernate.org/t/org-hibernate-annotationexception-use-of-onetomany-or-manytomany-targeting-an-unmapped-class/897
+
 
