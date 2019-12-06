@@ -68,6 +68,14 @@ https://www.google.com/search?q=%5Borg.springframework.http.converter.HttpMessag
 
 https://stackoverflow.com/questions/26957554/jsonmappingexception-could-not-initialize-proxy-no-session
 
+https://stackoverflow.com/questions/21708339/avoid-jackson-serialization-on-non-fetched-lazy-objects?noredirect=1&lq=1
+
+# hibernate5module cannot be resolved to a type
+
+https://www.google.com/search?sxsrf=ACYBGNSMHKk6w9rEWq5O-64Ik5IOObCh7w%3A1575670006349&ei=9tDqXdL6FLSRhbIPnKuGsAY&q=hibernate5module+cannot+be+resolved+to+a+type&oq=Hibernate5Module&gs_l=psy-ab.1.3.35i39j35i39i19j0i19l2j0i30i19l3j0i5i30i19l2.0.0..29125...0.0..0.1473.2744.7-2......0......gws-wiz.......0i7i30i19.8JPiUpCrdIc
+
+https://stackoverflow.com/questions/33727017/configure-jackson-to-omit-lazy-loading-attributes-in-spring-boot/42368452
+
 
 
 
