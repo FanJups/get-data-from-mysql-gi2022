@@ -54,4 +54,12 @@ https://www.google.com/search?q=org.hibernate.AnnotationException%3A+Use+of+%40O
 
 https://discourse.hibernate.org/t/org-hibernate-annotationexception-use-of-onetomany-or-manytomany-targeting-an-unmapped-class/897
 
+# @manytoone @onetomany composite key hibernate
+
+https://www.google.com/search?q=%40manytoone+%40onetomany+composite+key+hibernate&oq=%40manytoone+%40onetomany+composite+key+hibernate&aqs=chrome..69i57.23413j0j7&sourceid=chrome&ie=UTF-8
+
+https://stackoverflow.com/questions/2611619/onetomany-and-composite-primary-keys
+
+https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-and-hibernate/
+
 
