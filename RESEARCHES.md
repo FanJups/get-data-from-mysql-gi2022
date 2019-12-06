@@ -62,4 +62,14 @@ https://stackoverflow.com/questions/2611619/onetomany-and-composite-primary-keys
 
 https://vladmihalcea.com/the-best-way-to-map-a-composite-primary-key-with-jpa-and-hibernate/
 
+# [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: could not initialize proxy
+
+https://www.google.com/search?q=%5Borg.springframework.http.converter.HttpMessageNotWritableException%3A+Could+not+write+JSON%3A+could+not+initialize+proxy&oq=%5Borg.springframework.http.converter.HttpMessageNotWritableException%3A+Could+not+write+JSON%3A+could+not+initialize+proxy&aqs=chrome..69i57.2241j0j7&sourceid=chrome&ie=UTF-8
+
+https://stackoverflow.com/questions/26957554/jsonmappingexception-could-not-initialize-proxy-no-session
+
+
+
+
+
 
