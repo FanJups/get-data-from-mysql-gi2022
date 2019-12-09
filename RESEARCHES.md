@@ -77,7 +77,9 @@ https://www.google.com/search?sxsrf=ACYBGNSMHKk6w9rEWq5O-64Ik5IOObCh7w%3A1575670
 https://stackoverflow.com/questions/33727017/configure-jackson-to-omit-lazy-loading-attributes-in-spring-boot/42368452
 
 
+# onetomany
 
+https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 
 
 
