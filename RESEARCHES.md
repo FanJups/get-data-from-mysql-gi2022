@@ -81,5 +81,7 @@ https://stackoverflow.com/questions/33727017/configure-jackson-to-omit-lazy-load
 
 https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 
+# many to one bidirectional
 
+https://thoughts-on-java.org/hibernate-tips-map-bidirectional-many-one-association/?utm_source=social&utm_medium=linkedin&utm_campaign=tip
 
